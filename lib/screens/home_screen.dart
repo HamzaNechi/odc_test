@@ -6,7 +6,6 @@ import 'package:odc/screens/widgets/dropdown_menu.dart';
 import 'package:odc/screens/widgets/place_card.dart';
 import 'package:odc/screens/widgets/toolbar_home.dart';
 import 'package:odc/utils/colors.dart';
-import 'package:odc/utils/crud.dart';
 import 'package:http/http.dart' as http;
 
 class HomeScreen extends StatefulWidget {
@@ -92,10 +91,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-
-                  //const SizedBox(height: 10,),
-
-                  //const CustomDropdownMenu()
                   
                 ],
               ),
