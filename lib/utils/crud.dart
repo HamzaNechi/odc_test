@@ -5,6 +5,8 @@ import 'dart:convert';
 
 class Crud {
 
+  static String BASE_URL ="https://api.opentripmap.com/0.1/en/places/radius?apikey=5ae2e3f221c38a28845f05b6e1e72f6e6fae9bc6a9473af209e333f9&radius=5000&lon=10.63699&lat=35.82539&rate=3&format=json";
+
   //post request
   postRequest(String url, Map data) async{
     try{
@@ -17,6 +19,22 @@ class Crud {
       }
     }catch(e){
       print("Error catch $e");
+    }
+  }
+
+
+
+  _fetchData() async {
+    try {
+      final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
+      print("response body = ${response.body}");
+      if (response.statusCode == 200) {
+        return jsonDecode(response.body);
+      } else {
+        throw Exception('Failed to load data');
+      }
+    } catch (error) {
+      print(error);
     }
   }
 

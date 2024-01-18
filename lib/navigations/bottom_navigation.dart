@@ -3,6 +3,7 @@ import 'package:odc/screens/favorit_screen.dart';
 import 'package:odc/screens/home_screen.dart';
 import 'package:odc/utils/colors.dart';
 
+
 class NavigationTools extends StatefulWidget {
   const NavigationTools({super.key});
 
@@ -13,6 +14,7 @@ class NavigationTools extends StatefulWidget {
 class _NavigationToolsState extends State<NavigationTools> {
   var screens = [const HomeScreen(), const FavoriteScreen()];
   var index = 0;
+
 
   @override
   Widget build(BuildContext context) {
